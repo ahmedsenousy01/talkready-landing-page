@@ -28,16 +28,13 @@ export default function Home() {
                         (course) =>
                             course.available && (
                                 <div
-                                    key={`course-${course.imgSrc}`}
+                                    key={`course-${course.title}`}
                                     className="col-span-1"
                                 >
                                     <div className="relative mb-2">
                                         <Image
-                                            className="w-full"
                                             src={course.imgSrc}
                                             alt="test"
-                                            width={280}
-                                            height={280}
                                         />
                                         {course.hasDiscount && (
                                             <span className="absolute bottom-4 left-4 rounded-xl bg-blue-600 px-3 py-1 font-bold text-white">
@@ -70,7 +67,7 @@ export default function Home() {
                 className="mx-auto mb-10 w-[90%] max-w-[1200px] py-8"
             >
                 <h2 className="mb-10 text-4xl sm:mb-8">
-                    Why Choose TalkReady?
+                    Why choose TalkReady?
                 </h2>
                 <div className="grid grid-flow-row grid-cols-1 gap-x-3 gap-y-12 sm:grid-cols-2 sm:gap-y-5 md:grid-cols-3">
                     {WhyChooseTalkReady.map((post) => (

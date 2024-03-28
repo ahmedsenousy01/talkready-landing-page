@@ -1,7 +1,8 @@
+import { TestPic } from "./images";
 export const Courses = [
     {
         title: "20 premium SAT English reading and writing preparation classes",
-        imgSrc: "/test.jpg",
+        imgSrc: TestPic,
         price: "€306",
         hasDiscount: true,
         available: false,
@@ -9,7 +10,7 @@ export const Courses = [
     },
     {
         title: "Adults English Course 2 Session per week",
-        imgSrc: "/test.jpg",
+        imgSrc: TestPic,
         price: "€94",
         hasDiscount: true,
         available: true,
@@ -17,7 +18,7 @@ export const Courses = [
     },
     {
         title: "Kids English Course 2 Session per week",
-        imgSrc: "/test.jpg",
+        imgSrc: TestPic,
         price: "€94",
         hasDiscount: true,
         available: true,
@@ -25,7 +26,7 @@ export const Courses = [
     },
     {
         title: "Placement Test",
-        imgSrc: "/test.jpg",
+        imgSrc: TestPic,
         price: "€8",
         hasDiscount: false,
         available: false,
@@ -33,7 +34,7 @@ export const Courses = [
     },
     {
         title: "Women-Only English Course 2 Session per week",
-        imgSrc: "/test.jpg",
+        imgSrc: TestPic,
         price: "€94",
         hasDiscount: true,
         available: false,
