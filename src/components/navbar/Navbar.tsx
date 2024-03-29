@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
     };
 
     return (
-        <nav className="fixed left-0 right-0 top-0 z-10 flex items-center justify-center bg-blue-950 py-3 text-white">
+        <nav className="fixed left-0 right-0 top-0 z-10 flex items-center justify-center bg-primary py-3 text-white">
             {/* nav container */}
             <div className="flex w-[90%] max-w-[1200px] items-center">
                 {/* logo */}
@@ -58,7 +58,7 @@ const Navbar: React.FC = () => {
                 {/* nav menu */}
                 <div
                     ref={navMenuRef}
-                    className="absolute left-0 top-0 h-screen w-full flex-1 translate-x-full bg-blue-950 transition-transform duration-500 ease-in-out sm:relative sm:ms-10 sm:block sm:h-auto sm:w-auto sm:translate-x-0"
+                    className="absolute left-0 top-0 h-screen w-full flex-1 translate-x-full bg-primary transition-transform duration-500 ease-in-out sm:relative sm:ms-10 sm:block sm:h-auto sm:w-auto sm:translate-x-0"
                 >
                     {/* mobile nav close button */}
                     <button
