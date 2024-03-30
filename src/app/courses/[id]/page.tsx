@@ -13,10 +13,10 @@ const page = async ({ params: { id } }: { params: { id: string } }) => {
         <div className={"min-h-screen"}>
             <section
                 title="First Impression"
-                className={"min-h-[50vh] bg-slate-800 pt-1 text-white md:px-10"}
+                className={"min-h-[50vh] bg-slate-800 pt-1 text-white lg:px-10"}
             >
-                <div className="md:mt-16 mx-auto flex max-w-[1200px] flex-col items-center py-8 md:flex-row gap-10">
-                    <div className="mx-auto w-[90%] md:w-[60%]">
+                <div className="lg:mt-16 mx-auto flex max-w-[1200px] flex-col items-center py-8 lg:flex-row gap-10">
+                    <div className="mx-auto w-[90%] lg:w-[60%]">
                         <div>
                             <h1
                                 className={"mb-5 text-2xl font-bold text-white"}
@@ -45,7 +45,7 @@ const page = async ({ params: { id } }: { params: { id: string } }) => {
                             <div>Created by: {course.createdBy}</div>
                         </div>
                     </div>
-                    <div className="order-first flex-1 md:order-none md:w-[30%]">
+                    <div className="order-first flex-1 lg:order-none lg:w-[30%]">
                         {course.preview.format === "image" ? (
                             <Image
                                 height={720}
@@ -57,6 +57,23 @@ const page = async ({ params: { id } }: { params: { id: string } }) => {
                             <video src={course.preview.url}></video>
                         )}
                     </div>
+                </div>
+            </section>
+            <section
+                title="course-content"
+                className="mx-auto w-[90%] max-w-[1200px] py-10"
+            >
+                <div
+                    className="border-2 border-gray-300 p-5 w-full lg:w-1/2"
+                >
+                    <h2 className="text-xl font-bold text-neutral-800 mb-4">
+                        What you&apos;ll learn
+                    </h2>
+                    <ul
+                        className="grid grid-flow-row grid-cols-2 gap-3 text-gray-700 text-sm list-disc"
+                    >
+                        {course.learn.map((item, i) => <li className="ms-3" key={i}>{item}</li>)}
+                    </ul>
                 </div>
             </section>
         </div>
