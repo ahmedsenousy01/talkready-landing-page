@@ -21,8 +21,8 @@ export default function Stars({rating}:{rating: number}) {
     if ((rating - i) > 0) {
         stars.push(
             <div key={i} className={`${container_shared_classes}`}>
-                <StarIconSolid viewBox="0 0 12 24" overflow={"hidden"}
-                    className={`${icon_shared_classes} !w-1/2`}/>
+                <StarIconSolid viewBox={`0 0 ${(rating - i) * 24} 24`} overflow={"hidden"}
+                    className={`${icon_shared_classes}`} style={{width: `${(rating-i)*100}%`}}/>
                 <StarIconOutline className={`${icon_shared_classes}`}/>
             </div>
         )
