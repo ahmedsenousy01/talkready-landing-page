@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
 
     const expandNavMenu = () => {
         if (navMenuRef.current) {
-            navMenuRef.current.classList.remove("transition-none");
+            navMenuRef.current.classList.replace("transition-none", "transition-transform");
             navMenuRef.current.classList.replace(
                 "translate-x-full",
                 "translate-x-0",
@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
             );
             setTimeout(() => {
                 if (navMenuRef.current) {
-                    navMenuRef.current.classList.add("transition-none");
+                    navMenuRef.current.classList.replace("transition-transform", "transition-none");
                 }
             }, 510);
         }
@@ -58,7 +58,7 @@ const Navbar: React.FC = () => {
                 {/* nav menu */}
                 <div
                     ref={navMenuRef}
-                    className="absolute left-0 top-0 h-screen w-full flex-1 translate-x-full bg-primary transition-transform transition-none duration-500 ease-in-out sm:relative sm:ms-10 sm:block sm:h-auto sm:w-auto sm:translate-x-0"
+                    className="absolute left-0 top-0 h-screen w-full flex-1 translate-x-full bg-primary transition-none duration-500 ease-in-out sm:relative sm:ms-10 sm:block sm:h-auto sm:w-auto sm:translate-x-0"
                 >
                     {/* mobile nav close button */}
                     <button
