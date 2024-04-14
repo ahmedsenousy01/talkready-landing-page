@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
                 <Link onClick={collapseNavMenu} href="/">
                     <Image
                         className="w-[13vmax] max-w-36 sm:w-[10vmax]"
-                        src="/talkready-logo.png"
+                        src="/images/talkready-logo.png"
                         alt="talkready logo"
                         width={700}
                         height={200}

@@ -14,7 +14,7 @@ const page = () => {
                 <div className="mx-auto grid w-[90%] max-w-[1200px] grid-flow-row grid-cols-1 gap-x-8 sm:grid-cols-2">
                     <div className="col-span-1">
                         <Image
-                            src="/Bailey-headshot.jpg"
+                            src="/images/Bailey-headshot.jpg"
                             alt="teacher bailey headshot"
                             width={3600}
                             height={3600}
