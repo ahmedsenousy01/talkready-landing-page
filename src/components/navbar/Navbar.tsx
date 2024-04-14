@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
                     >
                         <XCircleIcon className="w-8" />
                     </button>
-                    <ul className="list-none pt-3 sm:flex sm:flex-grow sm:pt-0">
+                    <ul className="list-none justify-end pt-3 sm:flex sm:flex-grow sm:pt-0">
                         <li className="text-center">
                             <Link
                                 onClick={collapseNavMenu}
@@ -93,7 +93,7 @@ const Navbar: React.FC = () => {
                                 Contact
                             </Link>
                         </li>
-                        <li className="ms-auto flex justify-center gap-5 text-center">
+                        {/* <li className="ms-auto flex justify-center gap-5 text-center">
                             <Link
                                 onClick={collapseNavMenu}
                                 className="block rounded-md px-3 py-2 hover:bg-blue-900"
@@ -110,7 +110,7 @@ const Navbar: React.FC = () => {
                             >
                                 <ShoppingBagIcon className={"w-6"} />
                             </Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
 

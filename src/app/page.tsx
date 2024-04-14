@@ -2,11 +2,13 @@ import Image from "next/image";
 import clsx from "clsx";
 
 import { Courses, WhyChooseTalkReady } from "@/constants";
+import CtaSocials from "@/components/cta-socials/CtaSocials";
+import Link from "next/link";
 
 export default function Home() {
     return (
         <main>
-            <div className="mb-5 h-screen bg-[url('../../public/home-page-hero-section.jpg')] bg-cover bg-center bg-no-repeat">
+            <div className="mb-5 h-screen bg-[url('../../public/images/home-page-hero-section.jpg')] bg-cover bg-center bg-no-repeat">
                 <div className="flex size-full items-center justify-center bg-[rgba(0,0,0,0.25)]">
                     <div className="max-w-[90%] rounded-xl bg-[rgba(0,0,0,0.2)] p-10 text-center text-xl font-semibold text-white sm:text-2xl md:text-3xl">
                         Learn English Online from Certified Native Experts
@@ -27,15 +29,18 @@ export default function Home() {
                     {Courses.map(
                         (course) =>
                             course.available && (
-                                <div
+                                <Link
+                                    href={`/courses/${course.id}`}
                                     key={`course-${course.title}`}
-                                    className="col-span-1"
+                                    className="col-span-1 rounded-lg transition-all hover:translate-y-[-6px] "
                                 >
                                     <div className="relative mb-2">
-                                        <Image
-                                            src={course.imgSrc}
-                                            alt="test"
-                                        />
+                                        {course.imgSrc && (
+                                            <Image
+                                                src={course.imgSrc}
+                                                alt="test"
+                                            />
+                                        )}
                                         {course.hasDiscount && (
                                             <span className="absolute bottom-4 left-4 rounded-xl bg-blue-600 px-3 py-1 font-bold text-white">
                                                 Sale
@@ -49,14 +54,14 @@ export default function Home() {
                                                 course.hasDiscount,
                                         })}
                                     >
-                                        {course.price} GBP
+                                        {course.price}
                                     </span>
                                     {course.hasDiscount && (
                                         <span className="text-sm">
-                                            {course.priceAfterDiscount} GBP
+                                            {course.priceAfterDiscount}
                                         </span>
                                     )}
-                                </div>
+                                </Link>
                             ),
                     )}
                 </div>
@@ -91,6 +96,7 @@ export default function Home() {
                         </div>
                     ))}
                 </div>
+                <CtaSocials />
             </section>
         </main>
     );

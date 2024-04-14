@@ -15,6 +15,9 @@ const nextConfig = {
             },
         ];
     },
+    images: {
+        minimumCacheTTL: 860000,
+    },
 };
 export default MillionLint.next({
     rsc: true,
